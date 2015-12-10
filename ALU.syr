@@ -1,0 +1,356 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: ALU.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ALU.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ALU"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : ALU
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\Alicia\Documents\CSE140L\Lab4\ShiftRight.v" into library work
+Parsing module <ShiftRight>.
+Analyzing Verilog file "C:\Users\Alicia\Documents\CSE140L\Lab4\ShiftLeft.v" into library work
+Parsing module <ShiftLeft>.
+Analyzing Verilog file "C:\Users\Alicia\Documents\CSE140L\Lab4\Comparator.v" into library work
+Parsing module <Comparator>.
+WARNING:HDLCompiler:751 - "C:\Users\Alicia\Documents\CSE140L\Lab4\Comparator.v" Line 27: Redeclaration of ansi port Out7 is not allowed
+Analyzing Verilog file "C:\Users\Alicia\Documents\CSE140L\Lab4\Adder.v" into library work
+Parsing module <Adder>.
+WARNING:HDLCompiler:751 - "C:\Users\Alicia\Documents\CSE140L\Lab4\Adder.v" Line 27: Redeclaration of ansi port Out0 is not allowed
+Analyzing Verilog file "C:\Users\Alicia\Documents\CSE140L\Lab4\ALU.v" into library work
+Parsing module <ALU>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <ALU>.
+WARNING:HDLCompiler:604 - "C:\Users\Alicia\Documents\CSE140L\Lab4\ALU.v" Line 27: Module instantiation should have an instance name
+
+Elaborating module <Adder>.
+WARNING:HDLCompiler:604 - "C:\Users\Alicia\Documents\CSE140L\Lab4\ALU.v" Line 28: Module instantiation should have an instance name
+
+Elaborating module <ShiftLeft>.
+WARNING:HDLCompiler:604 - "C:\Users\Alicia\Documents\CSE140L\Lab4\ALU.v" Line 29: Module instantiation should have an instance name
+
+Elaborating module <ShiftRight>.
+WARNING:HDLCompiler:604 - "C:\Users\Alicia\Documents\CSE140L\Lab4\ALU.v" Line 34: Module instantiation should have an instance name
+
+Elaborating module <Comparator>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <ALU>.
+    Related source file is "C:\Users\Alicia\Documents\CSE140L\Lab4\ALU.v".
+    Summary:
+Unit <ALU> synthesized.
+
+Synthesizing Unit <Adder>.
+    Related source file is "C:\Users\Alicia\Documents\CSE140L\Lab4\Adder.v".
+    Found 8-bit adder for signal <Out0> created at line 30.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <Adder> synthesized.
+
+Synthesizing Unit <ShiftLeft>.
+    Related source file is "C:\Users\Alicia\Documents\CSE140L\Lab4\ShiftLeft.v".
+WARNING:Xst:647 - Input <A<7:7>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <ShiftLeft> synthesized.
+
+Synthesizing Unit <ShiftRight>.
+    Related source file is "C:\Users\Alicia\Documents\CSE140L\Lab4\ShiftRight.v".
+WARNING:Xst:647 - Input <A<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <ShiftRight> synthesized.
+
+Synthesizing Unit <Comparator>.
+    Related source file is "C:\Users\Alicia\Documents\CSE140L\Lab4\Comparator.v".
+    Found 8-bit comparator lessequal for signal <n0000> created at line 30
+    Summary:
+	inferred   1 Comparator(s).
+Unit <Comparator> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 8-bit adder                                           : 1
+# Comparators                                          : 1
+ 8-bit comparator lessequal                            : 1
+# Xors                                                 : 1
+ 8-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 8-bit adder                                           : 1
+# Comparators                                          : 1
+ 8-bit comparator lessequal                            : 1
+# Xors                                                 : 1
+ 8-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <ALU> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block ALU, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : ALU.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 61
+#      GND                         : 1
+#      LUT2                        : 40
+#      LUT5                        : 1
+#      LUT6                        : 3
+#      MUXCY                       : 7
+#      MUXF7                       : 1
+#      XORCY                       : 8
+# IO Buffers                       : 80
+#      IBUF                        : 16
+#      OBUF                        : 64
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice LUTs:                   44  out of  63400     0%  
+    Number used as Logic:                44  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     44
+   Number with an unused Flip Flop:      44  out of     44   100%  
+   Number with an unused LUT:             0  out of     44     0%  
+   Number of fully used LUT-FF pairs:     0  out of     44     0%  
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                          80
+ Number of bonded IOBs:                  80  out of    210    38%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 2.683ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 394 / 62
+-------------------------------------------------------------------------
+Delay:               2.683ns (Levels of Logic = 6)
+  Source:            A<2> (PAD)
+  Destination:       o8<7> (PAD)
+
+  Data Path: A<2> to o8<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   0.001   0.725  A_2_IBUF (A_2_IBUF)
+     LUT6:I0->O            2   0.097   0.697  o8<0>2 (o8<0>1)
+     LUT6:I0->O            1   0.097   0.000  o8<0>1_F (N6)
+     MUXF7:I0->O           1   0.277   0.379  o8<0>1 (o8<0>2)
+     LUT5:I3->O            8   0.097   0.311  o8<0>21 (o8_0_OBUF)
+     OBUF:I->O                 0.000          o8_7_OBUF (o8<7>)
+    ----------------------------------------
+    Total                      2.683ns (0.569ns logic, 2.114ns route)
+                                       (21.2% logic, 78.8% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.16 secs
+ 
+--> 
+
+Total memory usage is 426408 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    8 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

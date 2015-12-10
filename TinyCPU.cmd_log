@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "C:/Users/Alicia/Documents/CSE140L/Lab4/TinyCPU.xst" -ofn "C:/Users/Alicia/Documents/CSE140L/Lab4/TinyCPU.syr" 
+xst -intstyle ise -ifn "C:/Users/Alicia/Documents/CSE140L/Lab4/TinyCPU.xst" -ofn "C:/Users/Alicia/Documents/CSE140L/Lab4/TinyCPU.syr" 

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="751" delta="old" >"C:\Users\Alicia\Documents\CSE140L\Lab4\Comparator.v" Line 27: Redeclaration of ansi port <arg fmt="%s" index="1">Out7</arg> is not allowed
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="751" delta="old" >"C:\Users\Alicia\Documents\CSE140L\Lab4\Adder.v" Line 27: Redeclaration of ansi port <arg fmt="%s" index="1">Out0</arg> is not allowed
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="751" delta="old" >"C:\Users\Alicia\Documents\CSE140L\Lab4\Register8Bit.v" Line 29: Redeclaration of ansi port <arg fmt="%s" index="1">Qout</arg> is not allowed
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="751" delta="old" >"C:\Users\Alicia\Documents\CSE140L\Lab4\Mux8To1.v" Line 27: Redeclaration of ansi port <arg fmt="%s" index="1">Y</arg> is not allowed
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="751" delta="new" >"C:\Users\Alicia\Documents\CSE140L\Lab4\Mux2To1.v" Line 28: Redeclaration of ansi port <arg fmt="%s" index="1">w</arg> is not allowed
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="751" delta="old" >"C:\Users\Alicia\Documents\CSE140L\Lab4\InstructionDecoder.v" Line 27: Redeclaration of ansi port <arg fmt="%s" index="1">Clr</arg> is not allowed
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="751" delta="old" >"C:\Users\Alicia\Documents\CSE140L\Lab4\InstructionDecoder.v" Line 28: Redeclaration of ansi port <arg fmt="%s" index="1">S</arg> is not allowed
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="817" delta="new" >"C:\Users\Alicia\Documents\CSE140L\Lab4\TinyCPU.v" Line 55: System task <arg fmt="%s" index="1">monitor</arg> ignored for synthesis
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="817" delta="new" >"C:\Users\Alicia\Documents\CSE140L\Lab4\ALU.v" Line 35: System task <arg fmt="%s" index="1">monitor</arg> ignored for synthesis
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">A&lt;7:7&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">A&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_EnA</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+</msg>
+
+<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram__n0023</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+</msg>
+
+</messages>
+

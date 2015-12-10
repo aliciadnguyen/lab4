@@ -1,0 +1,46 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/Alicia/Documents/CSE140L/Lab4/TinyCPUTest_isim_beh.exe -prj C:/Users/Alicia/Documents/CSE140L/Lab4/TinyCPUTest_beh.prj work.TinyCPUTest work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/Alicia/Documents/CSE140L/Lab4/ShiftRight.v" into library work
+Analyzing Verilog file "C:/Users/Alicia/Documents/CSE140L/Lab4/ShiftLeft.v" into library work
+Analyzing Verilog file "C:/Users/Alicia/Documents/CSE140L/Lab4/Comparator.v" into library work
+WARNING:HDLCompiler:751 - "C:/Users/Alicia/Documents/CSE140L/Lab4/Comparator.v" Line 27: Redeclaration of ansi port Out7 is not allowed
+Analyzing Verilog file "C:/Users/Alicia/Documents/CSE140L/Lab4/Adder.v" into library work
+WARNING:HDLCompiler:751 - "C:/Users/Alicia/Documents/CSE140L/Lab4/Adder.v" Line 27: Redeclaration of ansi port Out0 is not allowed
+Analyzing Verilog file "C:/Users/Alicia/Documents/CSE140L/Lab4/Register8Bit.v" into library work
+WARNING:HDLCompiler:751 - "C:/Users/Alicia/Documents/CSE140L/Lab4/Register8Bit.v" Line 29: Redeclaration of ansi port Qout is not allowed
+Analyzing Verilog file "C:/Users/Alicia/Documents/CSE140L/Lab4/Mux8To1.v" into library work
+WARNING:HDLCompiler:751 - "C:/Users/Alicia/Documents/CSE140L/Lab4/Mux8To1.v" Line 27: Redeclaration of ansi port Y is not allowed
+Analyzing Verilog file "C:/Users/Alicia/Documents/CSE140L/Lab4/Mux2To1.v" into library work
+WARNING:HDLCompiler:751 - "C:/Users/Alicia/Documents/CSE140L/Lab4/Mux2To1.v" Line 28: Redeclaration of ansi port w is not allowed
+Analyzing Verilog file "C:/Users/Alicia/Documents/CSE140L/Lab4/InstructionDecoder.v" into library work
+WARNING:HDLCompiler:751 - "C:/Users/Alicia/Documents/CSE140L/Lab4/InstructionDecoder.v" Line 27: Redeclaration of ansi port Clr is not allowed
+WARNING:HDLCompiler:751 - "C:/Users/Alicia/Documents/CSE140L/Lab4/InstructionDecoder.v" Line 28: Redeclaration of ansi port S is not allowed
+Analyzing Verilog file "C:/Users/Alicia/Documents/CSE140L/Lab4/BusSplit.v" into library work
+Analyzing Verilog file "C:/Users/Alicia/Documents/CSE140L/Lab4/ALU.v" into library work
+Analyzing Verilog file "C:/Users/Alicia/Documents/CSE140L/Lab4/TinyCPU.v" into library work
+Analyzing Verilog file "C:/Users/Alicia/Documents/CSE140L/Lab4/TinyCPUTest.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module BusSplit
+Compiling module InstructionDecoder
+Compiling module Register8Bit
+Compiling module Mux2To1
+Compiling module Adder
+Compiling module ShiftLeft
+Compiling module ShiftRight
+Compiling module Comparator
+Compiling module ALU
+Compiling module Mux8To1
+Compiling module TinyCPU
+Compiling module TinyCPUTest
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 6 sub-compilation(s) to finish...
+Compiled 13 Verilog Units
+Built simulation executable C:/Users/Alicia/Documents/CSE140L/Lab4/TinyCPUTest_isim_beh.exe
+Fuse Memory Usage: 26524 KB
+Fuse CPU Usage: 468 ms

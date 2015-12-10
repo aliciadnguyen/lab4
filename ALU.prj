@@ -1,0 +1,5 @@
+verilog work "ShiftRight.v"
+verilog work "ShiftLeft.v"
+verilog work "Comparator.v"
+verilog work "Adder.v"
+verilog work "ALU.v"

@@ -1,0 +1,546 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: TinyCPU.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "TinyCPU.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "TinyCPU"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : TinyCPU
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\Alicia\Documents\CSE140L\Lab4\ShiftRight.v" into library work
+Parsing module <ShiftRight>.
+Analyzing Verilog file "C:\Users\Alicia\Documents\CSE140L\Lab4\ShiftLeft.v" into library work
+Parsing module <ShiftLeft>.
+Analyzing Verilog file "C:\Users\Alicia\Documents\CSE140L\Lab4\Comparator.v" into library work
+Parsing module <Comparator>.
+WARNING:HDLCompiler:751 - "C:\Users\Alicia\Documents\CSE140L\Lab4\Comparator.v" Line 27: Redeclaration of ansi port Out7 is not allowed
+Analyzing Verilog file "C:\Users\Alicia\Documents\CSE140L\Lab4\Adder.v" into library work
+Parsing module <Adder>.
+WARNING:HDLCompiler:751 - "C:\Users\Alicia\Documents\CSE140L\Lab4\Adder.v" Line 27: Redeclaration of ansi port Out0 is not allowed
+Analyzing Verilog file "C:\Users\Alicia\Documents\CSE140L\Lab4\Register8Bit.v" into library work
+Parsing module <Register8Bit>.
+WARNING:HDLCompiler:751 - "C:\Users\Alicia\Documents\CSE140L\Lab4\Register8Bit.v" Line 29: Redeclaration of ansi port Qout is not allowed
+Analyzing Verilog file "C:\Users\Alicia\Documents\CSE140L\Lab4\Mux8To1.v" into library work
+Parsing module <Mux8To1>.
+WARNING:HDLCompiler:751 - "C:\Users\Alicia\Documents\CSE140L\Lab4\Mux8To1.v" Line 27: Redeclaration of ansi port Y is not allowed
+Analyzing Verilog file "C:\Users\Alicia\Documents\CSE140L\Lab4\Mux2To1.v" into library work
+Parsing module <Mux2To1>.
+WARNING:HDLCompiler:751 - "C:\Users\Alicia\Documents\CSE140L\Lab4\Mux2To1.v" Line 28: Redeclaration of ansi port w is not allowed
+Analyzing Verilog file "C:\Users\Alicia\Documents\CSE140L\Lab4\InstructionDecoder.v" into library work
+Parsing module <InstructionDecoder>.
+WARNING:HDLCompiler:751 - "C:\Users\Alicia\Documents\CSE140L\Lab4\InstructionDecoder.v" Line 27: Redeclaration of ansi port Clr is not allowed
+WARNING:HDLCompiler:751 - "C:\Users\Alicia\Documents\CSE140L\Lab4\InstructionDecoder.v" Line 28: Redeclaration of ansi port S is not allowed
+Analyzing Verilog file "C:\Users\Alicia\Documents\CSE140L\Lab4\BusSplit.v" into library work
+Parsing module <BusSplit>.
+Analyzing Verilog file "C:\Users\Alicia\Documents\CSE140L\Lab4\ALU.v" into library work
+Parsing module <ALU>.
+Analyzing Verilog file "C:\Users\Alicia\Documents\CSE140L\Lab4\TinyCPU.v" into library work
+Parsing module <TinyCPU>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <TinyCPU>.
+WARNING:HDLCompiler:817 - "C:\Users\Alicia\Documents\CSE140L\Lab4\TinyCPU.v" Line 55: System task monitor ignored for synthesis
+
+Elaborating module <BusSplit>.
+
+Elaborating module <InstructionDecoder>.
+
+Elaborating module <Register8Bit>.
+
+Elaborating module <Mux2To1>.
+
+Elaborating module <ALU>.
+WARNING:HDLCompiler:817 - "C:\Users\Alicia\Documents\CSE140L\Lab4\ALU.v" Line 35: System task monitor ignored for synthesis
+
+Elaborating module <Adder>.
+
+Elaborating module <ShiftLeft>.
+
+Elaborating module <ShiftRight>.
+
+Elaborating module <Comparator>.
+
+Elaborating module <Mux8To1>.
+"C:\Users\Alicia\Documents\CSE140L\Lab4\Mux8To1.v" Line 38. $display Y is: 0
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <TinyCPU>.
+    Related source file is "C:\Users\Alicia\Documents\CSE140L\Lab4\TinyCPU.v".
+    Summary:
+	no macro.
+Unit <TinyCPU> synthesized.
+
+Synthesizing Unit <BusSplit>.
+    Related source file is "C:\Users\Alicia\Documents\CSE140L\Lab4\BusSplit.v".
+    Summary:
+	no macro.
+Unit <BusSplit> synthesized.
+
+Synthesizing Unit <InstructionDecoder>.
+    Related source file is "C:\Users\Alicia\Documents\CSE140L\Lab4\InstructionDecoder.v".
+    Found 8x1-bit Read Only RAM for signal <EnA>
+    Found 16x7-bit Read Only RAM for signal <_n0023>
+    Summary:
+	inferred   2 RAM(s).
+Unit <InstructionDecoder> synthesized.
+
+Synthesizing Unit <Register8Bit>.
+    Related source file is "C:\Users\Alicia\Documents\CSE140L\Lab4\Register8Bit.v".
+    Found 8-bit register for signal <Qout>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <Register8Bit> synthesized.
+
+Synthesizing Unit <Mux2To1>.
+    Related source file is "C:\Users\Alicia\Documents\CSE140L\Lab4\Mux2To1.v".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Mux2To1> synthesized.
+
+Synthesizing Unit <ALU>.
+    Related source file is "C:\Users\Alicia\Documents\CSE140L\Lab4\ALU.v".
+    Summary:
+Unit <ALU> synthesized.
+
+Synthesizing Unit <Adder>.
+    Related source file is "C:\Users\Alicia\Documents\CSE140L\Lab4\Adder.v".
+    Found 8-bit adder for signal <Out0> created at line 31.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <Adder> synthesized.
+
+Synthesizing Unit <ShiftLeft>.
+    Related source file is "C:\Users\Alicia\Documents\CSE140L\Lab4\ShiftLeft.v".
+WARNING:Xst:647 - Input <A<7:7>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <ShiftLeft> synthesized.
+
+Synthesizing Unit <ShiftRight>.
+    Related source file is "C:\Users\Alicia\Documents\CSE140L\Lab4\ShiftRight.v".
+WARNING:Xst:647 - Input <A<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <ShiftRight> synthesized.
+
+Synthesizing Unit <Comparator>.
+    Related source file is "C:\Users\Alicia\Documents\CSE140L\Lab4\Comparator.v".
+    Found 8-bit comparator lessequal for signal <n0000> created at line 30
+    Summary:
+	inferred   1 Comparator(s).
+Unit <Comparator> synthesized.
+
+Synthesizing Unit <Mux8To1>.
+    Related source file is "C:\Users\Alicia\Documents\CSE140L\Lab4\Mux8To1.v".
+    Found 8-bit 8-to-1 multiplexer for signal <Y> created at line 21.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Mux8To1> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x7-bit single-port Read Only RAM                    : 1
+ 8x1-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 1
+ 8-bit adder                                           : 1
+# Registers                                            : 3
+ 8-bit register                                        : 3
+# Comparators                                          : 1
+ 8-bit comparator lessequal                            : 1
+# Multiplexers                                         : 2
+ 8-bit 2-to-1 multiplexer                              : 1
+ 8-bit 8-to-1 multiplexer                              : 1
+# Xors                                                 : 1
+ 8-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <InstructionDecoder>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_EnA> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 1-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <instruction<3:1>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <EnA>           |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0023> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <instruction>   |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <InstructionDecoder> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x7-bit single-port distributed Read Only RAM        : 1
+ 8x1-bit single-port distributed Read Only RAM         : 1
+# Adders/Subtractors                                   : 1
+ 8-bit adder                                           : 1
+# Registers                                            : 24
+ Flip-Flops                                            : 24
+# Comparators                                          : 1
+ 8-bit comparator lessequal                            : 1
+# Multiplexers                                         : 2
+ 8-bit 2-to-1 multiplexer                              : 1
+ 8-bit 8-to-1 multiplexer                              : 1
+# Xors                                                 : 1
+ 8-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <TinyCPU> ...
+
+Optimizing unit <Register8Bit> ...
+
+Optimizing unit <ALU> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block TinyCPU, actual ratio is 0.
+FlipFlop RegisterA/Qout_7 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop RegisterA/Qout_6 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop RegisterA/Qout_5 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop RegisterA/Qout_4 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop RegisterA/Qout_3 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop RegisterA/Qout_2 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop RegisterA/Qout_1 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop RegisterA/Qout_0 has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 32
+ Flip-Flops                                            : 32
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : TinyCPU.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 106
+#      GND                         : 1
+#      LUT2                        : 17
+#      LUT3                        : 3
+#      LUT4                        : 5
+#      LUT5                        : 20
+#      LUT6                        : 42
+#      MUXCY                       : 7
+#      MUXF7                       : 3
+#      XORCY                       : 8
+# FlipFlops/Latches                : 32
+#      FDRE                        : 32
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 36
+#      IBUF                        : 12
+#      OBUF                        : 24
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              24  out of  126800     0%  
+ Number of Slice LUTs:                   87  out of  63400     0%  
+    Number used as Logic:                87  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     92
+   Number with an unused Flip Flop:      68  out of     92    73%  
+   Number with an unused LUT:             5  out of     92     5%  
+   Number of fully used LUT-FF pairs:    19  out of     92    20%  
+   Number of unique control sets:         3
+
+IO Utilization: 
+ Number of IOs:                          37
+ Number of bonded IOBs:                  37  out of    210    17%  
+    IOB Flip Flops/Latches:               8
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Clk                                | BUFGP                  | 32    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 2.480ns (Maximum Frequency: 403.291MHz)
+   Minimum input arrival time before clock: 2.779ns
+   Maximum output required time after clock: 0.731ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clk'
+  Clock period: 2.480ns (frequency: 403.291MHz)
+  Total number of paths / destination ports: 409 / 16
+-------------------------------------------------------------------------
+Delay:               2.480ns (Levels of Logic = 4)
+  Source:            RegisterB/Qout_4 (FF)
+  Destination:       RegOut/Qout_6 (FF)
+  Source Clock:      Clk rising
+  Destination Clock: Clk rising
+
+  Data Path: RegisterB/Qout_4 to RegOut/Qout_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             8   0.361   0.588  RegisterB/Qout_4 (RegisterB/Qout_4)
+     LUT4:I0->O            1   0.097   0.511  alu/o8<0>1_SW0 (N2)
+     LUT5:I2->O            8   0.097   0.327  alu/o8<0>1 (alu/o8<0>2)
+     LUT5:I4->O            1   0.097   0.295  mux8/Mmux_Y_2_f7_5_SW1 (N41)
+     LUT6:I5->O            1   0.097   0.000  mux8/Mmux_Y_2_f7_5 (m8Out<6>)
+     FDRE:D                    0.008          RegOut/Qout_6
+    ----------------------------------------
+    Total                      2.480ns (0.757ns logic, 1.723ns route)
+                                       (30.5% logic, 69.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
+  Total number of paths / destination ports: 528 / 96
+-------------------------------------------------------------------------
+Offset:              2.779ns (Levels of Logic = 5)
+  Source:            In<8> (PAD)
+  Destination:       RegOut/Qout_7 (FF)
+  Destination Clock: Clk rising
+
+  Data Path: In<8> to RegOut/Qout_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            20   0.001   0.599  In_8_IBUF (In_8_IBUF)
+     LUT3:I0->O           31   0.097   0.790  ID/Mram__n002331 (ID/Mram__n00233)
+     LUT5:I0->O            2   0.097   0.299  alu/o8<0>21_SW1 (N6)
+     LUT6:I5->O            1   0.097   0.693  mux8/Mmux_Y_2_f7_6_SW1_SW0 (N56)
+     LUT6:I0->O            1   0.097   0.000  mux8/Mmux_Y_2_f7_6 (m8Out<7>)
+     FDRE:D                    0.008          RegOut/Qout_7
+    ----------------------------------------
+    Total                      2.779ns (0.397ns logic, 2.382ns route)
+                                       (14.3% logic, 85.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk'
+  Total number of paths / destination ports: 24 / 24
+-------------------------------------------------------------------------
+Offset:              0.731ns (Levels of Logic = 1)
+  Source:            RegisterB/Qout_6 (FF)
+  Destination:       RegB<6> (PAD)
+  Source Clock:      Clk rising
+
+  Data Path: RegisterB/Qout_6 to RegB<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            21   0.361   0.370  RegisterB/Qout_6 (RegisterB/Qout_6)
+     OBUF:I->O                 0.000          RegB_6_OBUF (RegB<6>)
+    ----------------------------------------
+    Total                      0.731ns (0.361ns logic, 0.370ns route)
+                                       (49.4% logic, 50.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock Clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Clk            |    2.480|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 10.90 secs
+ 
+--> 
+
+Total memory usage is 371368 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   11 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+
